@@ -1,7 +1,7 @@
 import logging
 
-from secpy.core.mixins.base_network_client_mixin import BaseNetworkClientMixin
-from secpy.core.ticker_company_exchange_map import TickerCompanyExchangeMap
+from core.mixins.base_network_client_mixin import BaseNetworkClientMixin
+from core.ticker_company_exchange_map import TickerCompanyExchangeMap
 
 
 class BaseEndpointMixin(BaseNetworkClientMixin):

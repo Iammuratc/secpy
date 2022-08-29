@@ -1,8 +1,8 @@
 from enum import Enum
 
-from secpy.core.endpoint_enum import EndpointEnum
-from secpy.core.mixins.base_endpoint_mixin import BaseEndpointMixin
-from secpy.core.utils.period_format_opts import PeriodFormatOpts
+from core.endpoint_enum import EndpointEnum
+from core.mixins.base_endpoint_mixin import BaseEndpointMixin
+from core.utils.period_format_opts import PeriodFormatOpts
 
 
 class FramesEndpoint(BaseEndpointMixin):

@@ -1,12 +1,12 @@
 from enum import Enum
 from datetime import datetime
 
-from secpy.core.bulk_data import BulkDataEndpoint
-from secpy.core.endpoint_enum import EndpointEnum
-from secpy.core.mixins.base_endpoint_mixin import BaseEndpointMixin
+from core.bulk_data import BulkDataEndpoint
+from core.endpoint_enum import EndpointEnum
+from core.mixins.base_endpoint_mixin import BaseEndpointMixin
 from types import SimpleNamespace
 
-from secpy.core.utils.cik_opts import CIKOpts
+from core.utils.cik_opts import CIKOpts
 
 
 class CompanyFactsEndpoint(BaseEndpointMixin):
@@ -48,6 +48,7 @@ class CompanyFacts:
         Each concept contains an array of data where each element represents the value of that fact for a given filing
         @param data: dict
         """
+        print(data['facts']['us-gaap'].values())
         self.cik = self.__set_cik(data)
         self.entity_name = data[self.CompanyFactsSchemaEnum.ENTITY_NAME.value]
         self.taxonomies = self.__parse_taxonomies(data)
@@ -59,7 +60,7 @@ class CompanyFacts:
     def __parse_taxonomies(self, data):
         return SimpleNamespace(**{
             taxonomy_name.replace("-", "_"): SimpleNamespace(**{
-                concept_name:  Concept(concept_value, concept_name) for concept_name, concept_value in taxonomy_concepts.items()
+                concept_name:  Concept(concept_value, concept_name) for concept_name, concept_value in taxonomy_concepts.items()#[:10]
             })
             for taxonomy_name, taxonomy_concepts in data[self.CompanyFactsSchemaEnum.FACTS.value].items()
         })
@@ -134,7 +135,7 @@ class StatementHistory:
         """
         return [statement for key, statement in self.__form_period_filing_map.items() if key.startswith(form)]
 
-    def get_statements_for_date_range(self, start_date=None, end_date=None, date_format="%y/%m/%d"):
+    def get_statements_for_date_range(self, start_date=None, end_date=None, date_format="%Y/%m/%d"):
         """
         Gets all statements that were filed w/in a given date range.
         If start_date but not end_date is specified, all statements filed after start_date will be returned

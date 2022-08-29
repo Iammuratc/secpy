@@ -1,10 +1,10 @@
 from enum import Enum
 
-from secpy.core.bulk_data import BulkDataEndpoint
-from secpy.core.endpoint_enum import EndpointEnum
-from secpy.core.mixins.base_endpoint_mixin import BaseEndpointMixin
-from secpy.core.network_client import NetworkClient
-from secpy.core.utils.cik_opts import CIKOpts
+from core.bulk_data import BulkDataEndpoint
+from core.endpoint_enum import EndpointEnum
+from core.mixins.base_endpoint_mixin import BaseEndpointMixin
+from core.network_client import NetworkClient
+from core.utils.cik_opts import CIKOpts
 
 
 class SubmissionsEndpoint(BaseEndpointMixin):

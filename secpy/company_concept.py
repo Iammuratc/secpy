@@ -1,8 +1,8 @@
 from enum import Enum
 
-from secpy.company_facts import HasFactMixin
-from secpy.core.endpoint_enum import EndpointEnum
-from secpy.core.mixins.base_endpoint_mixin import BaseEndpointMixin
+from company_facts import HasFactMixin
+from core.endpoint_enum import EndpointEnum
+from core.mixins.base_endpoint_mixin import BaseEndpointMixin
 
 
 class CompanyConceptEndpoint(BaseEndpointMixin):
