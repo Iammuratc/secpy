@@ -1,7 +1,7 @@
 from os import path
 
-from core.endpoint_enum import EndpointEnum
-from core.network_client import NetworkClient
+from secpy.core.endpoint_enum import EndpointEnum
+from secpy.core.network_client import NetworkClient
 
 
 class BaseNetworkClientMixin:

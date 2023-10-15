@@ -1,6 +1,6 @@
 from enum import Enum
-from core.utils.cik_opts import CIKOpts
-from core.utils.period_format_opts import PeriodFormatOpts
+from secpy.core.utils.cik_opts import CIKOpts
+from secpy.core.utils.period_format_opts import PeriodFormatOpts
 
 
 class EndpointEnum(Enum):

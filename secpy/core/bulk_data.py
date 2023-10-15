@@ -7,7 +7,7 @@ import json
 from abc import ABC, abstractmethod
 import time
 
-from core.mixins.base_endpoint_mixin import BaseEndpointMixin
+from secpy.core.mixins.base_endpoint_mixin import BaseEndpointMixin
 
 
 class BulkDataEndpoint(BaseEndpointMixin, ABC):

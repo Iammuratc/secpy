@@ -1,8 +1,8 @@
-from company_facts import CompanyFactsEndpoint, CompanyFactsBulkEndpoint
-from submissions import SubmissionsEndpoint, SubmissionsBulkEndpoint
-from company_concept import CompanyConceptEndpoint
-from frames import FramesEndpoint
-from core.ticker_company_exchange_map import TickerCompanyExchangeMap
+from secpy.company_facts import CompanyFactsEndpoint, CompanyFactsBulkEndpoint
+from secpy.submissions import SubmissionsEndpoint, SubmissionsBulkEndpoint
+from secpy.company_concept import CompanyConceptEndpoint
+from secpy.frames import FramesEndpoint
+from secpy.core.ticker_company_exchange_map import TickerCompanyExchangeMap
 
 
 class SECPyClient:

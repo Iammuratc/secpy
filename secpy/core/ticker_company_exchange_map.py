@@ -1,7 +1,7 @@
-from core.mixins.base_network_client_mixin import BaseNetworkClientMixin, EndpointEnum
+from secpy.core.mixins.base_network_client_mixin import BaseNetworkClientMixin, EndpointEnum
 from enum import Enum
 
-from core.utils.cik_opts import CIKOpts
+from secpy.core.utils.cik_opts import CIKOpts
 
 
 class TickerCompanyExchangeMap(BaseNetworkClientMixin):

@@ -1,12 +1,12 @@
 from enum import Enum
 from datetime import datetime
 
-from core.bulk_data import BulkDataEndpoint
-from core.endpoint_enum import EndpointEnum
-from core.mixins.base_endpoint_mixin import BaseEndpointMixin
+from secpy.core.bulk_data import BulkDataEndpoint
+from secpy.core.endpoint_enum import EndpointEnum
+from secpy.core.mixins.base_endpoint_mixin import BaseEndpointMixin
 from types import SimpleNamespace
 
-from core.utils.cik_opts import CIKOpts
+from secpy.core.utils.cik_opts import CIKOpts
 
 
 class CompanyFactsEndpoint(BaseEndpointMixin):
@@ -48,7 +48,7 @@ class CompanyFacts:
         Each concept contains an array of data where each element represents the value of that fact for a given filing
         @param data: dict
         """
-        print(data['facts']['us-gaap'].values())
+        # print(data['facts']['us-gaap'].values())
         self.cik = self.__set_cik(data)
         self.entity_name = data[self.CompanyFactsSchemaEnum.ENTITY_NAME.value]
         self.taxonomies = self.__parse_taxonomies(data)
